@@ -104,6 +104,9 @@ public class WebSocketTask extends AsyncTask<VideoConferenceActivity, Void, Void
                     .build();
             Response response = client.newCall(request).execute();
             String responseString =  response.body().string();
+
+            Log.d(TAG,"responseString: " + responseString);
+
             String token = "";
             try {
                 JSONObject jsonObject = new JSONObject(responseString);

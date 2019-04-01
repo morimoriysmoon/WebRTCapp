@@ -108,6 +108,7 @@ public class CustomWebSocketListener implements WebSocketListener {
         joinRoomParams.put("recorder", "false");
         joinRoomParams.put("secret", "MY_SECRET");
         joinRoomParams.put("session", sessionName);
+        joinRoomParams.put("platform", "Chrome 73.0.3683.86 on Windows 10 64-bit");
         joinRoomParams.put("token", token);
         sendJson(websocket, "joinRoom", joinRoomParams);
 

@@ -181,7 +181,10 @@ public class PeersManager {
                 localOfferParams.put("videoActive", "true");
                 localOfferParams.put("doLoopback", "false");
                 localOfferParams.put("frameRate", "30");
+                localOfferParams.put("hasAudio", "true");
+                localOfferParams.put("hasVideo", "true");
                 localOfferParams.put("typeOfVideo", "CAMERA");
+                localOfferParams.put("videoDimensions", "{\"width\":320, \"height\":240}");
                 localOfferParams.put("sdpOffer", sessionDescription.description);
                 if (webSocketAdapter.getId() > 1) {
                     webSocketAdapter.sendJson(webSocket, "publishVideo", localOfferParams);
